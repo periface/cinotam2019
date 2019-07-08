@@ -1,0 +1,117 @@
+@import '../../variables.scss';
+.hero-container {
+  background: gray;
+  height: 500px;
+  .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    * {
+      color: white;
+    }
+    img {
+      width: 35%;
+    }
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 40px auto 0;
+      text-shadow: 1px 1px 1px #000;
+    }
+  }
+}
+.section {
+  width: 100%;
+  min-height: 100px;
+
+  position: relative;
+}
+.section-inverted {
+  background: #efeff0;
+}
+.content {
+  text-align: center;
+  padding: 30px;
+  width: 75%;
+  margin: 0 auto;
+}
+.content-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  padding-left: 15%;
+  padding-right: 15%;
+  .item {
+    max-width: 45%;
+    flex-grow: 1;
+    align-self: flex-start;
+    margin: 0 auto;
+    text-align: justify;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+.visita-cinotam-container {
+  width: 75%;
+  margin: 0 auto;
+  h2 {
+    text-align: center;
+  }
+  .info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .item {
+      text-align: center;
+      max-width: 45%;
+      flex-grow: 1;
+      align-self: flex-start;
+      margin: 0 auto;
+      img {
+        width: 90%;
+      }
+    }
+  }
+}
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 75%;
+  margin: 0 auto;
+  .logo {
+    flex-grow: 1;
+    align-self: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .inegi {
+    img {
+      width: 50%;
+    }
+  }
+  .conacyt {
+    img {
+      width: 50%;
+    }
+  }
+  .gobtam {
+    img {
+      width: 50%;
+    }
+  }
+}
+.separator.welcome {
+  width: 75%;
+  margin: 0 auto;
+}

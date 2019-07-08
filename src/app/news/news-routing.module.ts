@@ -3,14 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../shared/angular-material.module';
-import { HomeButtonsComponent } from './components/home-buttons/home-buttons.component';
-import { WelcomeComponent } from './welcome.component';
+import { NewsPageComponent } from './news-page.component';
 
-const routes: Routes = [{ path: '', component: WelcomeComponent }];
+const routes: Routes = [{ path: '', component: NewsPageComponent }];
 
 @NgModule({
-  declarations: [WelcomeComponent, HomeButtonsComponent],
+  declarations: [NewsPageComponent],
   imports: [RouterModule.forChild(routes), AngularMaterialModule, FormsModule],
   exports: [RouterModule]
 })
-export class WelcomeRoutingModule {}
+export class NewsRoutingModule {}

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+$azul-cinotam: #171796;
+$naranja-cinotam: #e75204;
+$celeste-cinotam: #008cba;
+$cafe-cinotam: #a96218;
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+.text-center {
+  text-align: center !important;
+}
+.cinotam-button {
+  margin: 10px;
+  border: 2px solid #a96218 !important;
+  color: black;
+}
+.separator {
+  width: 100%;
+  height: 1px;
+  background: $azul-cinotam;
+}
+
+.orange {
+  background: $naranja-cinotam;
+}

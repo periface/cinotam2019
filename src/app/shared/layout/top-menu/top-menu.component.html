@@ -1,0 +1,24 @@
+<div class="top-banner-container">
+  <div class="cintilla-azul"></div>
+  <div class="cintilla-naranja"></div>
+  <div class="cintilla"></div>
+</div>
+<div class="top-logo-container">
+  <div class="uat-logo item item-end">
+    <img width="30%" src="/assets/img/uat-logo.jpg" alt="" />
+  </div>
+  <div class="cintoam-logo item">
+    <img width="40%" src="/assets/img/cinotam.png" alt="" />
+  </div>
+</div>
+<div class="separator"></div>
+<div class="main-menu-container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="menu-items"
+      ><div *ngFor="let item of this.routes">
+        <a [routerLink]="item.url">{{ item.title }}</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div class="separator orange"></div>
