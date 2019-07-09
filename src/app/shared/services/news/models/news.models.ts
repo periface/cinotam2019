@@ -8,4 +8,6 @@ export class NewsPost implements BasicPost {
   shortDesc?: string;
   content?: string;
   mainImg?: string;
+  creationDate: Date;
+  lastUpdate: Date;
 }

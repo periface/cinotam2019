@@ -21,3 +21,12 @@
 .separator {
   background: $naranja-cinotam;
 }
+a {
+  text-decoration: none;
+}
+mat-card-content {
+  img {
+    width: 140px;
+    height: 90px;
+  }
+}

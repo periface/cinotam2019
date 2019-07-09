@@ -5,6 +5,6 @@ import { NewsRoutingModule } from './news-routing.module';
 @NgModule({
   declarations: [],
   exports: [],
-  imports: [CommonModule, NewsRoutingModule]
+  imports: [NewsRoutingModule]
 })
 export class NewsModule {}

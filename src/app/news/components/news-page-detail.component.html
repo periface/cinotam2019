@@ -1,0 +1,23 @@
+<div
+  *ngIf="this.newsPost"
+  class="news-hero-container"
+  [ngStyle]="{ background: 'url(' + newsPost.mainImg + ')' }"
+>
+  <div class="background"></div>
+  <div class="title-container">
+    <h3>{{ newsPost.title }}</h3>
+    <p class="text-center">Publicado el: 28/07/2019</p>
+  </div>
+  <div class="button-bottom">
+    <a href="#bottom"><i class="fa fa-arrow-down"></i></a>
+  </div>
+</div>
+<div class="article-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="article-content" [innerHTML]="newsPost.content"></div>
+      </div>
+    </div>
+  </div>
+</div>
