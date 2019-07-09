@@ -1,0 +1,27 @@
+@import '../../../../variables';
+.footer-container {
+  background: $gris-cinotam;
+  padding-top: 20px;
+}
+.img-uat {
+  width: 50%;
+  height: 90%;
+  align-self: flex-start !important;
+}
+.img-posgrado {
+  width: 30%;
+  margin-left: 15px;
+  margin-top: -10px;
+  align-self: flex-start !important;
+}
+.prosoft {
+  width: 50%;
+  height: 85%;
+  margin: 0 auto;
+}
+.left-logo-container {
+  position: relative;
+}
+h3 {
+  margin-top: 0;
+}
