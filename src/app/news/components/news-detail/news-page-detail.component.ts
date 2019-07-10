@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NewsService } from 'src/app/shared/services/news/news.service';
 import { NewsPost } from 'src/app/shared/services/news/models/news.models';
+import { NewsService } from 'src/app/shared/services/news/news.service';
 
 @Component({
   templateUrl: './news-page-detail.component.html',

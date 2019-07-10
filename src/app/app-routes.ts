@@ -12,5 +12,10 @@ export const APP_ROUTES: Routes = [
     path: 'noticias',
     loadChildren: () => import('./news/news.module').then(m => m.NewsModule)
   },
+  {
+    path: 'account',
+    loadChildren: () =>
+      import('./account/account.module').then(m => m.AccountModule)
+  },
   { path: '**', component: NotFoundComponent }
 ];
