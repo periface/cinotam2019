@@ -18,18 +18,18 @@ export class TopMenuComponent {
       title: 'Noticias',
       url: 'noticias'
     },
-    {
-      title: 'Proyectos',
-      url: 'proyectos'
-    },
-    {
-      title: 'Patentes',
-      url: 'patentes'
-    },
-    {
-      title: 'Servicios',
-      url: 'servicios'
-    },
+    // {
+    //   title: 'Proyectos',
+    //   url: 'proyectos'
+    // },
+    // {
+    //   title: 'Patentes',
+    //   url: 'patentes'
+    // },
+    // {
+    //   title: 'Servicios',
+    //   url: 'servicios'
+    // },
     {
       title: 'Convocatorias',
       url: 'convocatorias'

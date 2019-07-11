@@ -9,7 +9,7 @@
     <p class="text-center">Publicado el: {{ newsPost.creationDate | date }}</p>
   </div>
   <div class="button-bottom">
-    <a href="#bottom"><i class="fa fa-arrow-down"></i></a>
+    <a (click)="scrollToBottom()"><i class="fa fa-arrow-down"></i></a>
   </div>
 </div>
 <div *ngIf="this.newsPost" class="article-container">
@@ -21,3 +21,4 @@
     </div>
   </div>
 </div>
+<div #bottom class="bottom"></div>

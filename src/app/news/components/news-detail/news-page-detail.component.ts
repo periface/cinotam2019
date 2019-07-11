@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NewsPost } from 'src/app/shared/services/news/models/news.models';
 import { NewsService } from 'src/app/shared/services/news/news.service';
@@ -9,6 +9,7 @@ import { NewsService } from 'src/app/shared/services/news/news.service';
 })
 export class NewsPageDetailComponent implements OnInit {
   newsPost: NewsPost;
+  @ViewChild('bottom', { static: true }) bottom: ElementRef;
   /**
    *
    */
@@ -20,5 +21,11 @@ export class NewsPageDetailComponent implements OnInit {
     this.newsService
       .get(this.activatedRoute.snapshot.params.slug)
       .subscribe(post => (this.newsPost = post));
+  }
+  scrollToBottom() {
+    this.bottom.nativeElement.scrollIntoView({
+      block: 'end',
+      behavior: 'smooth'
+    });
   }
 }
