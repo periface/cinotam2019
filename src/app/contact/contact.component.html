@@ -1,12 +1,12 @@
 <div class="container">
-  <div class="row">
+  <div class="row middle-xs">
     <div class="col-xs-6 text-center">
-      <h3>
+      <h1>
         Contacto
-      </h3>
-      <p>
+      </h1>
+      <h2>
         <strong>C.P. Gabriela Gómez Hernández</strong>
-      </p>
+      </h2>
       <p>
         <strong><a href="mailto:citco@uat.edu.mx">citco@uat.edu.mx</a></strong>
       </p>
@@ -33,7 +33,7 @@
             <input
               matInput
               formControlName="email"
-              type="mail"
+              type="email"
               placeholder="Email"
               required
             />
@@ -59,13 +59,50 @@
               required
             ></textarea>
           </mat-form-field>
-          <button style="width: 20%;" color="primary" mat-raised-button>
+        </div>
+        <div *ngIf="windowDefined" class="example-container text-center center">
+          <ngx-recaptcha2
+            #captchaElem
+            [siteKey]="'6LeeXRcUAAAAAJBW9N7D_VmLfQa2tmTDKQYl-m8p'"
+            [useGlobalDomain]="false"
+            formControlName="recaptcha"
+          >
+          </ngx-recaptcha2>
+          <br /><br />
+          <button
+            [disabled]="!form.valid"
+            style="width: 20%;"
+            color="primary"
+            mat-raised-button
+          >
             Enviar
           </button>
 
-          <br /><br />
+          <br />
         </div>
       </form>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="text-center">Visita el Cinotam</h2>
+    </div>
+    <!-- <div class="col-lg-8"></div> -->
+    <div class="col-lg-12">
+      <div class="info-container">
+        <div class="item">
+          <img src="/assets/img/map.jpg" alt="" />
+        </div>
+        <div class="text-center">
+          <p>Centro de Innovación y Transferencia del Conocimiento.</p>
+          <p>Centro Universitario “Adolfo López Mateos”</p>
+          <p>C.P. 87149</p>
+          <p>Tel. 3181800 Ext. 2493</p>
+          <p>Ciudad Victoria, Tamaulipas</p>
+          <p>Correo electrónico: citco@uat.edu.mx</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

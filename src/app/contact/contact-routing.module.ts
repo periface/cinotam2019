@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../shared/angular-material.module';
 import { ContactComponent } from './contact.component';
+import { NgxCaptchaModule } from 'ngx-captcha';
 const routes: Routes = [{ path: '', component: ContactComponent }];
 @NgModule({
   declarations: [ContactComponent],
@@ -14,7 +15,8 @@ const routes: Routes = [{ path: '', component: ContactComponent }];
     FormsModule,
     CommonModule,
     AngularMaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ],
   providers: [],
   exports: [RouterModule]

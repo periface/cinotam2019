@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
   form: FormGroup;
+  windowDefined: boolean;
   /**
    *
    */
@@ -22,8 +23,12 @@ export class ContactComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', Validators.required],
       subject: ['', Validators.required],
-      message: ['', Validators.required]
+      message: ['', Validators.required],
+      recaptcha: ['', Validators.required]
     });
+    if (typeof window !== 'undefined') {
+      this.windowDefined = true;
+    }
   }
   save() {
     this.contactService.sendContactForm(this.form.value).then(() => {

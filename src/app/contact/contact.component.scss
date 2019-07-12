@@ -7,3 +7,14 @@
 .example-container > * {
   width: 85%;
 }
+.center {
+  margin: 0 auto;
+}
+.info-container {
+  .item {
+    text-align: center;
+    img {
+      width: 35%;
+    }
+  }
+}

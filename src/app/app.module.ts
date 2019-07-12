@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +36,8 @@ import { ThanksComponent } from './shared/thanks.component';
     AngularFireStorageModule, // imports firebase/storage only needed for storage features,
     AngularFireAuthGuardModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
