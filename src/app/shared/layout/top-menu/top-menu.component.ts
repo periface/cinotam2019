@@ -30,17 +30,17 @@ export class TopMenuComponent {
     //   title: 'Servicios',
     //   url: 'servicios'
     // },
-    {
-      title: 'Convocatorias',
-      url: 'convocatorias'
-    },
+    // {
+    //   title: 'Convocatorias',
+    //   url: 'convocatorias'
+    // },
     {
       title: 'Maestría',
       url: 'maestria'
     },
     {
-      title: 'Cursos en Linea',
-      url: 'cursosenlinea'
+      title: 'Cursos',
+      url: 'cursos'
     },
     {
       title: 'Ventanilla Única',

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { NewsPost } from '../shared/services/news/models/news.models';
 import { NewsService } from '../shared/services/news/news.service';
 
@@ -6,15 +7,23 @@ import { NewsService } from '../shared/services/news/news.service';
   templateUrl: './news-page.component.html',
   styleUrls: ['./news-page.component.scss']
 })
-export class NewsPageComponent implements OnInit {
-  news: NewsPost[] = [];
+export class NewsPageComponent implements OnInit, OnDestroy {
   /**
    *
    */
   constructor(private newsService: NewsService) {}
+  news: NewsPost[] = [];
+  newsSubscription: Subscription;
+
   ngOnInit(): void {
-    this.newsService.getAll().subscribe(data => {
+    this.newsSubscription = this.newsService.getAll().subscribe(data => {
       this.news = data;
     });
+  }
+  ngOnDestroy(): void {
+    console.log('Destroy');
+    if (this.newsSubscription) {
+      this.newsSubscription.unsubscribe();
+    }
   }
 }

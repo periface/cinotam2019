@@ -23,6 +23,16 @@ export const APP_ROUTES: Routes = [
       import('./contact/contact.module').then(m => m.ContactModule)
   },
   {
+    path: 'maestria',
+    loadChildren: () =>
+      import('./master/master.module').then(m => m.MasterModule)
+  },
+  {
+    path: 'cursos',
+    loadChildren: () =>
+      import('./courses/courses.module').then(m => m.CoursesModule)
+  },
+  {
     path: 'gracias',
     component: ThanksComponent
   },

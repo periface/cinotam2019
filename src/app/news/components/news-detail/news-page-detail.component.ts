@@ -1,5 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { NewsPost } from 'src/app/shared/services/news/models/news.models';
 import { NewsService } from 'src/app/shared/services/news/news.service';
 
@@ -7,9 +14,10 @@ import { NewsService } from 'src/app/shared/services/news/news.service';
   templateUrl: './news-page-detail.component.html',
   styleUrls: ['./news-page-detail.component.scss']
 })
-export class NewsPageDetailComponent implements OnInit {
+export class NewsPageDetailComponent implements OnInit, OnDestroy {
   newsPost: NewsPost;
   @ViewChild('bottom', { static: true }) bottom: ElementRef;
+  detailSubscription: Subscription;
   /**
    *
    */
@@ -18,7 +26,7 @@ export class NewsPageDetailComponent implements OnInit {
     private newsService: NewsService
   ) {}
   ngOnInit(): void {
-    this.newsService
+    this.detailSubscription = this.newsService
       .get(this.activatedRoute.snapshot.params.slug)
       .subscribe(post => (this.newsPost = post));
   }
@@ -27,5 +35,11 @@ export class NewsPageDetailComponent implements OnInit {
       block: 'end',
       behavior: 'smooth'
     });
+  }
+  ngOnDestroy(): void {
+    console.log('Destroy');
+    if (this.detailSubscription) {
+      this.detailSubscription.unsubscribe();
+    }
   }
 }
