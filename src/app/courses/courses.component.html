@@ -5,7 +5,11 @@
     </div>
   </div>
   <div class="row around-xs" *ngIf="types">
-    <div *ngFor="let item of types" class="col-lg-4">
+    <div
+      *ngFor="let item of types"
+      (click)="goToCourses(item)"
+      class="col-lg-4"
+    >
       <mat-card class="card">
         <mat-card-content>
           <h3>{{ item.typeName }}</h3>

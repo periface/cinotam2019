@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularMaterialModule } from '../shared/angular-material.module';
+import { CatalogComponent } from './catalog/catalog.component';
 import { CoursesComponent } from './courses.component';
 const routes: Routes = [
   {
@@ -10,12 +11,13 @@ const routes: Routes = [
     component: CoursesComponent
   },
   {
-    path: 'type/:id'
+    path: 'catalogo/:id',
+    component: CatalogComponent
   }
 ];
 
 @NgModule({
-  declarations: [CoursesComponent],
+  declarations: [CoursesComponent, CatalogComponent],
   imports: [
     RouterModule.forChild(routes),
     AngularMaterialModule,

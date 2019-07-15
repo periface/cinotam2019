@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { CoursesService } from '../shared/services/courses/courses.service';
 import { CourseType } from '../shared/services/courses/models/course.models';
@@ -9,7 +10,7 @@ import { CourseType } from '../shared/services/courses/models/course.models';
 export class CoursesComponent implements OnInit, OnDestroy {
   courseTypes$: Subscription;
   types: CourseType[];
-  constructor(private coursesService: CoursesService) {}
+  constructor(private coursesService: CoursesService, private router: Router) {}
   ngOnInit(): void {
     this.courseTypes$ = this.coursesService
       .getCourseTypes()
@@ -23,5 +24,9 @@ export class CoursesComponent implements OnInit, OnDestroy {
     if (this.courseTypes$) {
       this.courseTypes$.unsubscribe();
     }
+  }
+  goToCourses(course: CourseType) {
+    console.log(course);
+    this.router.navigate(['cursos', 'catalogo', course.id]);
   }
 }

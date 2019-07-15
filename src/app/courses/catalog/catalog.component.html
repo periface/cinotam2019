@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="text-center">Catalogo</h2>
+    </div>
+  </div>
+  <div *ngIf="courses.length" class="row">
+    <div *ngFor="let item of courses" class="col-lg-4">
+      <mat-card>
+        <mat-card-content>
+          <img
+            class="mat-img"
+            mat-card-image
+            src="{{ item.mainImg }}"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div *ngIf="!courses.length">
+    <h2 class="text-center">No hay cursos disponibles por el momento</h2>
+  </div>
+</div>

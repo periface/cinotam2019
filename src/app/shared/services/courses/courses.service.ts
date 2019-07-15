@@ -4,6 +4,7 @@ import {
   AngularFirestoreCollection
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Course, CourseType } from './models/course.models';
 
 @Injectable({
@@ -18,16 +19,26 @@ export class CoursesService {
     this.courseTypeCollection = this.fb.collection<CourseType>('courseTypes');
   }
   getCourseTypes(): Observable<CourseType[]> {
-    return this.courseTypeCollection.valueChanges();
-  }
-  getCourses(typeId: string) {
-    return this.fb.collection<Course>('Courses', ref =>
-      ref.where('courseTypeId', '==', typeId)
+    return this.courseTypeCollection.snapshotChanges().pipe(
+      map(actions =>
+        actions.map(a => {
+          const data = a.payload.doc.data() as CourseType;
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        })
+      )
     );
+  }
+  getCourses(typeId: string): Observable<Course[]> {
+    return this.fb
+      .collection<Course>('courses', ref =>
+        ref.where('courseTypeId', '==', typeId)
+      )
+      .valueChanges();
   }
   getCourse(courseId: string): Observable<Course> {
     return this.fb
-      .collection<Course>('Courses')
+      .collection<Course>('courses')
       .doc<Course>(courseId)
       .valueChanges();
   }
