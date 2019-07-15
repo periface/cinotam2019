@@ -1,6 +1,6 @@
 import { NgSetupOptions, ngExpressEngine } from '@nguniversal/express-engine';
+import * as ddos from 'ddos';
 import * as express from 'express';
-
 export interface ServerAPIOptions {
   distPath: string;
   ngSetup?: NgSetupOptions;
@@ -18,10 +18,13 @@ export function createNgRenderMiddleware(
   distPath: string,
   ngSetup: NgSetupOptions
 ) {
-  const app = express();
-  app.use();
-  const router = express();
+  const ddosConf = new ddos({ burst: 4, limit: 300 });
 
+  const router = express();
+  router.use(ddosConf.express);
+  router.use((err, req, res, next) => {
+    res.status(429).send('Error, demasiadas peticiones :S');
+  });
   router.set('view engine', 'html');
   router.set('views', distPath);
 
