@@ -14,7 +14,12 @@
         <mat-card-content>
           <h3>{{ item.typeName }}</h3>
           <hr class="separator" />
-          <img width="100%" src="{{ item.mainImg }}" alt="" />
+          <img
+            width="100%"
+            [defaultImage]="'https://placeholder.pics/svg/450x300'"
+            [lazyLoad]="item.mainImg"
+            alt=""
+          />
         </mat-card-content>
       </mat-card>
     </div>

@@ -61,15 +61,20 @@
       <div class="img-container">
         <p>
           <a href="/assets/img/maestria2019.png" target="_blank">
-            <img src="/assets/img/maestria2019.png" alt="" />
+            <img
+              [defaultImage]="'https://placeholder.pics/svg/450x300'"
+              [lazyLoad]="'/assets/img/maestria2019.png'"
+              alt=""
+            />
           </a>
         </p>
         <p>
           <a href="/assets/img/maestria2019trip1.png" target="_blank">
             <img
               class="master"
-              src="/assets/img/maestria2019trip1.png"
               alt=""
+              [defaultImage]="'https://placeholder.pics/svg/450x300'"
+              [lazyLoad]="'/assets/img/maestria2019trip1.png'"
             />
           </a>
         </p>
@@ -77,8 +82,9 @@
           <a href="/assets/img/maestria2019trip2.png" target="_blank">
             <img
               class="master"
-              src="/assets/img/maestria2019trip2.png"
               alt=""
+              [defaultImage]="'https://placeholder.pics/svg/450x300'"
+              [lazyLoad]="'/assets/img/maestria2019trip2.png'"
             />
           </a>
         </p>
