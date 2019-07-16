@@ -1,7 +1,11 @@
 <div class="hero-container">
   <div class="hero-text">
     <h1>BIENVENIDO AL CINOTAM</h1>
-    <img src="/assets/img/prosoft.png" alt="" />
+    <img
+      [defaultImage]="'https://placeholder.pics/svg/450x300'"
+      [lazyLoad]="'/assets/img/prosoft.png'"
+      alt=""
+    />
     <h4>Centro de Innovación de la Universidad Autónoma de Tamaulipas</h4>
   </div>
 </div>
@@ -68,7 +72,11 @@
         >
       </div>
       <div class="item">
-        <img src="/assets/img/map.jpg" alt="" />
+        <img
+          [defaultImage]="'https://placeholder.pics/svg/450x300'"
+          [lazyLoad]="'/assets/img/map.jpg'"
+          alt=""
+        />
       </div>
     </div>
   </div>
@@ -77,13 +85,25 @@
   <div class="separator welcome"></div>
   <div class="logos">
     <div class="logo inegi">
-      <img src="/assets/img/inegi.jpg" alt="" />
+      <img
+        [defaultImage]="'https://placeholder.pics/svg/450x300'"
+        [lazyLoad]="'/assets/img/inegi.jpg'"
+        alt=""
+      />
     </div>
     <div class="logo conacyt">
-      <img src="/assets/img/conacyt.png" alt="" />
+      <img
+        [defaultImage]="'https://placeholder.pics/svg/450x300'"
+        [lazyLoad]="'/assets/img/conacyt.png'"
+        alt=""
+      />
     </div>
     <div class="logo gobtam">
-      <img src="/assets/img/gobtam.png" alt="" />
+      <img
+        [defaultImage]="'https://placeholder.pics/svg/450x300'"
+        [lazyLoad]="'/assets/img/gobtam.png'"
+        alt=""
+      />
     </div>
   </div>
 </section>

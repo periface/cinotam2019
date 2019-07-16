@@ -3,7 +3,12 @@
   <div class="row center-xs middle-xs">
     <div class="col-xs-4">
       <div class="left-logo-container">
-        <img class="img-uat" src="/assets/img/uat.png" alt="" />
+        <img
+          class="img-uat"
+          [defaultImage]="'https://placeholder.pics/svg/450x300'"
+          [lazyLoad]="'/assets/img/uat.png'"
+          alt=""
+        />
         <!-- <img class="img-posgrado" src="/assets/img/posgrado.png" alt="" /> -->
       </div>
     </div>
@@ -14,7 +19,12 @@
       </small>
     </div>
     <div class="col-xs-4">
-      <img class="prosoft" src="/assets/img/prosoft.png" alt="" />
+      <img
+        class="prosoft"
+        [defaultImage]="'https://placeholder.pics/svg/450x300'"
+        [lazyLoad]="'/assets/img/prosoft.png'"
+        alt=""
+      />
     </div>
   </div>
 </div>

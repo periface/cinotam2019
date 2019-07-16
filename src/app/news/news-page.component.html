@@ -16,7 +16,11 @@
           <h3>{{ item.title }}</h3>
           <hr class="separator" />
           <p>
-            <img [src]="item.mainImg" alt="" />
+            <img
+              [defaultImage]="'https://placeholder.pics/svg/450x300'"
+              [lazyLoad]="item.mainImg"
+              alt=""
+            />
             <strong>
               {{ item.lastUpdate }}
             </strong>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
+  MatCardModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
@@ -10,9 +11,9 @@ import {
   MatSortModule,
   MatStepperModule,
   MatTableModule,
-  MatToolbarModule,
-  MatCardModule
+  MatToolbarModule
 } from '@angular/material';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   exports: [
@@ -27,7 +28,8 @@ import {
     MatPaginatorModule,
     MatSortModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    LazyLoadImageModule
   ]
 })
 export class AngularMaterialModule {}
