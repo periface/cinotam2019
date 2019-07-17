@@ -36,5 +36,9 @@ export const APP_ROUTES: Routes = [
     path: 'gracias',
     component: ThanksComponent
   },
+  {
+    path: 'noencontrado',
+    component: NotFoundComponent
+  },
   { path: '**', component: NotFoundComponent }
 ];
