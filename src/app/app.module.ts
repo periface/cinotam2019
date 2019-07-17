@@ -13,6 +13,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ErrorComponent } from './error.component';
 import { NotFoundComponent } from './not-found.component';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { ScrollableDirective } from './shared/directives/scrollable/scrollable.directive';
@@ -23,7 +24,8 @@ import { ThanksComponent } from './shared/thanks.component';
     AppComponent,
     NotFoundComponent,
     ScrollableDirective,
-    ThanksComponent
+    ThanksComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-app' }),

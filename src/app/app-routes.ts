@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found.component';
 import { ThanksComponent } from './shared/thanks.component';
+import { ErrorComponent } from './error.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -40,5 +41,9 @@ export const APP_ROUTES: Routes = [
     path: 'noencontrado',
     component: NotFoundComponent
   },
+  {
+    path:'error',
+    component:ErrorComponent
+  }
   { path: '**', component: NotFoundComponent }
 ];
