@@ -11,7 +11,6 @@ import { AngularMaterialModule } from '../shared/angular-material.module';
 import { AddNewsPostComponent } from './components/add-newspost/add-newspost.component';
 import { NewsPageDetailComponent } from './components/news-detail/news-page-detail.component';
 import { NewsPageComponent } from './news-page.component';
-import { NewsDetailsResolver } from './resolvers/news-detail.resolver';
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['account']);
 const routes: Routes = [
   { path: '', component: NewsPageComponent },
@@ -40,7 +39,7 @@ const routes: Routes = [
     FormsModule,
     CommonModule
   ],
-  providers: [NewsDetailsResolver],
+  providers: [],
   exports: [RouterModule]
 })
 export class NewsRoutingModule {}

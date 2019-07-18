@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
+import { ErrorComponent } from './error.component';
 import { NotFoundComponent } from './not-found.component';
 import { ThanksComponent } from './shared/thanks.component';
-import { ErrorComponent } from './error.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -12,11 +12,6 @@ export const APP_ROUTES: Routes = [
   {
     path: 'noticias',
     loadChildren: () => import('./news/news.module').then(m => m.NewsModule)
-  },
-  {
-    path: 'account',
-    loadChildren: () =>
-      import('./account/account.module').then(m => m.AccountModule)
   },
   {
     path: 'ventanillaunica',
@@ -42,8 +37,8 @@ export const APP_ROUTES: Routes = [
     component: NotFoundComponent
   },
   {
-    path:'error',
-    component:ErrorComponent
-  }
+    path: 'error',
+    component: ErrorComponent
+  },
   { path: '**', component: NotFoundComponent }
 ];
