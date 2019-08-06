@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { ContactService } from '../shared/services/contact/contact.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ContactService } from '../shared/services/contact/contact.service';
 
 @Component({
   templateUrl: './contact.component.html',
